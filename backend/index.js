@@ -1,30 +1,16 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const user = require("./routes/user");
-const InitiateMongoServer = require("./config/db");
+const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
 
-// Initiate Mongo Server
-InitiateMongoServer();
+// set up express
 
 const app = express();
+app.use(express.json());
+app.use(cors());
 
-// PORT
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(bodyParser.json());
+app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
-app.get("/", (req, res) => {
-  res.json({ message: "API Working" });
-});
-
-/**
- * Router Middleware
- * Router - /user/*
- * Method - *
- */
-app.use("/user", user);
-
-app.listen(PORT, (req, res) => {
-  console.log(`Server Started at PORT ${PORT}`);
-});
+//set up mongoose
