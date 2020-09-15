@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import data from "../../assets/data.json";
 import JobBoard from "./JobBoard";
-import { ModalProvider } from "../../components/modal/modalContext";
-import PopUp from "../../components/modal/PopUp";
+import { ModalProvider } from "../signupmodal/modalContext";
+import PopUp from "../signupmodal/PopUp";
 
 const JobFilter = () => {
   const [jobs, setJobs] = useState([]);
