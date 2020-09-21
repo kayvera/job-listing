@@ -41,13 +41,7 @@ const JobFilter = () => {
   const filteredJobs = jobs.filter(filterFunc);
   return (
     <>
-      <header className="flex bg-teal-500 mb-12">
-        <img className="w-full" src="/images/bg-header-desktop.svg" alt="bg" />
-        <button className="cursor-pointer font-bold absolute self-center mt-20 right-0 py-4 px-8 m-8 text-white bg-gray-800 rounded">
-          Sign In
-        </button>
-      </header>
-      <div className="container m-auto">
+      <div className="container ml-64">
         {filters.length > 0 && (
           <div
             className={`flex bg-white shadow-md -my-20 mb-16 mx-10 p-6 rounded z-10 relative`}
