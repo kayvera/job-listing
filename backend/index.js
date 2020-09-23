@@ -30,8 +30,14 @@ mongoose.connect(
 
 //setup routes
 
-app.use("/users", require("./routes/userRouter"));
+app.use("/api/users", require("./routes/userRouter"));
 
-app.get("/", (req, res) => {
-  res.send("Hello from Express!");
-});
+if (
+  process.env.MONGODB_CONNECTION_STRING === "production" ||
+  process.env.MONGODB_CONNECTION_STRING === "staging"
+) {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  });
+}

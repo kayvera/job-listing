@@ -23,11 +23,14 @@ const Register = () => {
         passwordCheck,
         displayName,
       };
-      await Axios.post("http://localhost:5000/users/register", newUser);
-      const loginRes = await Axios.post("http://localhost:5000/users/login", {
-        email,
-        password,
-      });
+      await Axios.post("http://localhost:5000/api/users/register", newUser);
+      const loginRes = await Axios.post(
+        "http://localhost:5000/api/users/login",
+        {
+          email,
+          password,
+        }
+      );
       setUserData({ token: loginRes.data.token, user: loginRes.data.user });
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/");
