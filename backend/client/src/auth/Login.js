@@ -20,11 +20,8 @@ const Login = () => {
         email,
         password,
       };
-      await Axios.post("http://localhost:5000/api/users/login", loginUser);
-      const loginRes = await Axios.post(
-        "http://localhost:5000/api/users/login",
-        loginUser
-      );
+      await Axios.post("/api/users/login", loginUser);
+      const loginRes = await Axios.post("/api/users/login", loginUser);
       setUserData({ token: loginRes.data.token, user: loginRes.data.user });
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/");

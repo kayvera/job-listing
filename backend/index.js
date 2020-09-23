@@ -33,8 +33,8 @@ mongoose.connect(
 app.use("/api/users", require("./routes/userRouter"));
 
 if (
-  process.env.MONGODB_CONNECTION_STRING === "production" ||
-  process.env.MONGODB_CONNECTION_STRING === "staging"
+  process.env.NODE_ENV === "production" ||
+  process.env.NODE_ENV === "staging"
 ) {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
