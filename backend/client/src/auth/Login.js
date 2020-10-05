@@ -32,14 +32,14 @@ const Login = () => {
 
   return (
     <div>
-      <h2 className="flex flex-col mt-4 min-w-full items-center mx-64 font-bold text-3xl uppercase">
+      <h2 className="flex flex-col mt-4 lg:min-w-full items-center mx-64 font-bold text-3xl uppercase">
         Login
       </h2>
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
       <form
-        className="flex flex-col text-l min-w-full items-center mx-64"
+        className="flex flex-col text-l lg:min-w-full items-center mx-64"
         onSubmit={submit}
       >
         <label className="mt-4 mr-56 pl-1" htmlFor="login-email">

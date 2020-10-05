@@ -10,7 +10,7 @@ const Header = () => {
       <img
         src={Logo}
         alt="logo"
-        className="cursor-pointer absolute mt-20 ml-10"
+        className="cursor-pointer absolute lg:mt-20 lg:ml-10 "
         onClick={() => {
           history.push("/");
         }}

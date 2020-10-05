@@ -41,7 +41,7 @@ const JobFilter = () => {
   const filteredJobs = jobs.filter(filterFunc);
   return (
     <>
-      <div className="container ml-64">
+      <div className="container lg:ml-64">
         {filters.length > 0 && (
           <div
             className={`flex bg-white shadow-md -my-20 mb-16 mx-10 p-6 rounded z-10 relative`}
