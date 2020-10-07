@@ -7,7 +7,7 @@ A job filtering application that allows a user to look through jobs and filter j
 3. Data for application is pulled from an internal API data sheet
 4. Mobile Friendly
 
-### Easy Job UI Gallary
+### Easy Job UI Gallery
 #### Homepage Tab
 ![Homepage Tab](https://i.postimg.cc/qv301NBM/screencapture-easy-job-app-herokuapp-2020-10-07-13-20-51.png)
 
