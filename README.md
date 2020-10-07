@@ -1,5 +1,5 @@
 # Easy Job
-A meal prep application that allows you to order healthly meals that fit your lifestyle straight to your door.
+A job filtering application that allows a user to look through jobs and filter jobs by description. This application was built to learn more about tailwindcss and higher order javascript methods. 
 
 ### Highlights
 1. Full stack application built using react hooks, tailwind css, node.js, and mongoDB 
